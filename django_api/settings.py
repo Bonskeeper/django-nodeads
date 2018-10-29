@@ -137,4 +137,6 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 4
 }
 
+# This variable contains the name of the host on which the server is running.
+# The variable is needed to create a URL path for the child groups and elements.
 HOSTNAME = 'http://127.0.0.1:8000/'
