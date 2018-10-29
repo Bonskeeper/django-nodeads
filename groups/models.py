@@ -3,6 +3,7 @@ from treebeard.mp_tree import MP_Node
 from django_api.settings import HOSTNAME
 
 
+
 class Group(MP_Node):
     parent_group = models.ForeignKey('self', blank=True, null=True, on_delete=models.CASCADE)
     group_icon = models.ImageField(default='default_group.png', upload_to='groups_icons')
@@ -16,6 +17,7 @@ class Group(MP_Node):
 
     @property
     def child_groups_list(self):
+        print({})
         groups_json = {"child-groups": "{hostname}groups/{pk}/child_groups/".format(hostname=HOSTNAME, pk=self.pk)}
         return groups_json
 

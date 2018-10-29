@@ -5,7 +5,7 @@ from .models import Element, Group
 
 class ElementViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows elements to be viewed or edited.
+    API endpoint that display all saved elements. Allows elements to be created, viewed, edited or deleted.
     """
     queryset = Element.objects.filter(moderation=True).order_by('id')
     serializer_class = ElementSerializer
@@ -13,7 +13,7 @@ class ElementViewSet(viewsets.ModelViewSet):
 
 class GroupViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows groups to be viewed or edited.
+    API endpoint that display all saved groups. Allows groups to be created, viewed, edited or deleted.
     """
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
@@ -21,7 +21,7 @@ class GroupViewSet(viewsets.ModelViewSet):
 
 class ChildGroupViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows groups to be viewed or edited.
+    API endpoint that display child groups of choosen group.
     """
     serializer_class = ChildGroupSerializer
 
