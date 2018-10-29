@@ -10,11 +10,12 @@ Groups can be added to the selected group, edited and deleted.
 The first group you add will be the root group.
 
 API endpoint "child-groups":
-- "http://127.0.0.1:8000/groups/<int:pk>/child_groups/" - displays all subgroups of the selected group(pk its group id)
+- "http://127.0.0.1:8000/groups/pk/child_groups/" - displays all subgroups of the selected group(pk its group id)
 
 API endpoint "child-elements":
-- "http://127.0.0.1:8000/elements/<int:pk>/child_elements/" - displays all moderated elements of the selected group(pk its group id)
+- "http://127.0.0.1:8000/elements/pk/child_elements/" - displays all moderated elements of the selected group(pk its group id)
 
+# Project terms.
 Напишите приложение, которое будет иметь следующие модели:
 1. Группы (иерархическая структура):
 - родительская группа
